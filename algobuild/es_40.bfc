@@ -1,0 +1,29 @@
+PROG main
+	ASSIGN sono_costanti = 1
+	IN n
+	IN precedente
+	IN attuale
+	ASSIGN costante = attuale -precedente
+	ASSIGN precedente = attuale
+	ASSIGN maggiore = costante
+	FOR i = 0; i < n - 2; i = i + 1
+		IN attuale
+		ASSIGN differenza = attuale - precedente
+		IF differenza != costante
+			ASSIGN sono_costanti = 0
+		ELSE //if differenza != costante
+		END IF //differenza != costante
+		IF differenza > maggiore
+			ASSIGN maggiore = differenza
+		ELSE //if differenza > maggiore
+		END IF //differenza > maggiore
+		ASSIGN precedente = attuale
+	END FOR //i = 0; i < n - 2; i = i + 1
+	IF sono_costanti == 1
+		OUT "Le differenze sono costanti"
+		OUT costante
+	ELSE //if sono_costanti == 1
+		OUT "Le differenze non sono costanti"
+		OUT maggiore
+	END IF //sono_costanti == 1
+END PROG //main
