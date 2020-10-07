@@ -1,0 +1,23 @@
+PROG main
+	ASSIGN minori = 0
+	ASSIGN maggiori = 0
+	ASSIGN uguali = 0
+	IN k
+	IN n
+	WHILE n > 0
+		IN valore
+		IF valore > k
+			ASSIGN maggiori = maggiori + 1
+		ELSE //if valore > k
+			IF valore == k
+				ASSIGN uguali = uguali + 1
+			ELSE //if valore == k
+				ASSIGN minori = minori + 1
+			END IF //valore == k
+		END IF //valore > k
+		ASSIGN n =  n - 1
+	END WHILE //n > 0
+	OUT maggiori
+	OUT uguali
+	OUT minori
+END PROG //main

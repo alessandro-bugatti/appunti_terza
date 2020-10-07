@@ -1,0 +1,20 @@
+PROG main
+	IN h
+	IN k
+	IF h<k
+		ASSIGN temp=h
+		ASSIGN h=k
+		ASSIGN k=temp
+	ELSE //if h<k
+	END IF //h<k
+	IN n
+	ASSIGN compresi=0
+	FOR i=0; i<n; i=i+1
+		IN valore
+		IF valore>k && valore<h
+			ASSIGN compresi = compresi+1
+		ELSE //if valore>k && valore<h
+		END IF //valore>k && valore<h
+	END FOR //i=0; i<n; i=i+1
+	OUT compresi
+END PROG //main
