@@ -1,0 +1,13 @@
+PROG main
+	IN x
+	IF x == 0
+		ASSIGN w = 1
+	ELSE //if x == 0
+		ASSIGN w = 0
+		WHILE x > 0
+			ASSIGN w = w + 1
+			ASSIGN x = floor(x/10)
+		END WHILE //x > 0
+	END IF //x == 0
+	OUT w
+END PROG //main
