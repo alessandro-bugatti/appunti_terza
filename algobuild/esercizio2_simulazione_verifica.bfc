@@ -1,0 +1,38 @@
+PROG main
+	IN numero1
+	IN numero2
+	IN numero3
+	IF numero1 > numero2 && numero1 > numero3
+		IF numero2 > numero3
+			OUT numero3
+			OUT numero2
+			OUT numero1
+		ELSE //if numero2 > numero3
+			OUT numero2
+			OUT numero3
+			OUT numero1
+		END IF //numero2 > numero3
+	ELSE //if numero1 > numero2 && numero1 > numero3
+		IF numero2  > numero1 && numero2 > numero3
+			IF numero1 > numero3
+				OUT numero 3
+				OUT numero1
+				OUT numero2
+			ELSE //if numero1 > numero3
+				OUT numero1
+				OUT numero3
+				OUT numero2
+			END IF //numero1 > numero3
+		ELSE //if numero2  > numero1 && numero2 > numero3
+			IF numero2 > numero1
+				OUT numero1
+				OUT numero2
+				OUT numero3
+			ELSE //if numero2 > numero1
+				OUT numero2
+				OUT numero1
+				OUT numero3
+			END IF //numero2 > numero1
+		END IF //numero2  > numero1 && numero2 > numero3
+	END IF //numero1 > numero2 && numero1 > numero3
+END PROG //main

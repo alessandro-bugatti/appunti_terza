@@ -1,0 +1,13 @@
+PROG main
+	IN n
+	IF n%2==0
+		OUT "pari"
+		IF n%4 == 0
+			OUT "divisibile per 4"
+		ELSE //if n%4 == 0
+			OUT "non divisibile per 4"
+		END IF //n%4 == 0
+	ELSE //if n%2==0
+		OUT "dispari"
+	END IF //n%2==0
+END PROG //main

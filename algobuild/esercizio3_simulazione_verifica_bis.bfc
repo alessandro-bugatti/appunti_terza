@@ -1,0 +1,11 @@
+PROG main
+	IN altezza_iniziale
+	IN mesi
+	ASSIGN altezza = altezza_iniziale
+	ASSIGN crescita = altezza_iniziale/2
+	FOR i = 0; i < mesi; i = i + 1
+		ASSIGN altezza = altezza + crescita
+		ASSIGN crescita = crescita/2
+	END FOR //i = 0; i < mesi; i = i + 1
+	OUT altezza
+END PROG //main

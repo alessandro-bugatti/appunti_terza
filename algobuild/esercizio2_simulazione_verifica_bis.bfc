@@ -1,0 +1,26 @@
+PROG main
+	IN a
+	IN b
+	IN c
+	IF a > b
+		ASSIGN temp = a
+		ASSIGN a = b
+		ASSIGN b = temp
+	ELSE //if a > b
+	END IF //a > b
+	IF b > c
+		ASSIGN temp = c
+		ASSIGN c = b
+		ASSIGN b = temp
+	ELSE //if b > c
+	END IF //b > c
+	IF a > b
+		ASSIGN temp = a
+		ASSIGN a = b
+		ASSIGN b = temp
+	ELSE //if a > b
+	END IF //a > b
+	OUT a
+	OUT b
+	OUT c
+END PROG //main
