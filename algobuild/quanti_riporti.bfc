@@ -1,0 +1,19 @@
+PROG main
+	IN addendo1
+	IN addendo2
+	ASSIGN riporto = 0
+	ASSIGN tot_riporti = 0
+	WHILE addendo1 >0 || addendo2 > 0
+		ASSIGN cifra1 = addendo1 - floor(addendo1 /10) * 10
+		ASSIGN cifra2 = addendo2 - floor(addendo2 /10) * 10
+		IF cifra1 + cifra2 + riporto >= 10
+			ASSIGN riporto = 1
+			ASSIGN tot_riporti = tot_riporti +1
+		ELSE //if cifra1 + cifra2 + riporto >= 10
+			ASSIGN riporto = 0
+		END IF //cifra1 + cifra2 + riporto >= 10
+		ASSIGN addendo1 = floor(addendo1 /10)
+		ASSIGN addendo2 = floor(addendo2 /10)
+	END WHILE //addendo1 >0 || addendo2 > 0
+	OUT tot_riporti
+END PROG //main

@@ -1,0 +1,12 @@
+PROG main
+	ASSIGN lungo = 118.8
+	ASSIGN corto = 84
+	IN N
+	FOR i=0; i<N; i=i+1
+		ASSIGN temp = lungo / 2
+		ASSIGN lungo = corto
+		ASSIGN corto = temp
+	END FOR //i=0; i<N; i=i+1
+	OUT lungo
+	OUT corto
+END PROG //main
