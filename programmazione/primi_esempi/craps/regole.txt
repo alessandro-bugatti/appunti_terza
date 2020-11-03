@@ -1,0 +1,13 @@
+Gioco Craps
+
+Regole
+Si lanciano sempre 2 dadi da sei
+
+Al primo lancio:
+    • esce 7, il giocatore vince
+    • esce 2, 3 o 12, il banco vince
+    • in tutti gli altri casi, il primo lancio diventa il target
+
+Nel terzo caso si continuano a tirare i dadi fino a che:
+    • esce il target, il giocatore vince
+    • esce 7, il banco vince
