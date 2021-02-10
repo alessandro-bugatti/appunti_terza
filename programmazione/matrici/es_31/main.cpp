@@ -17,5 +17,9 @@ int main()
     cout << "Il valori letti dal sensore " << scelto << " sono :" << endl;
     for (int i = 0; i < GIORNI; i++)
         cout << "Il giorno " << i + 1 << " la temperatura era : " << temperature[scelto][i] << endl;
+    float media = 0;
+    for (int i = 0; i < GIORNI; i++)
+        media += temperature[scelto][i];
+    media /= GIORNI;
     return 0;
 }
