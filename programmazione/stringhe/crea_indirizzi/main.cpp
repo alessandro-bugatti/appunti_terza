@@ -17,9 +17,15 @@ string crea_email(string csv)
 
 int main()
 {
-    string csv = "ARRIVETTI;ALBERTO";
+    //Ridirezione dell'input
+    freopen("elenco.csv", "r", stdin);
+    freopen("elenco_email.txt", "w", stdout);
+    string s;
+    //finchè la getline riesce a leggere una stringa
+    while (getline(cin, s))
+        cout << crea_email(s) << endl;
 
     //Output: ALBERTO.ARRIVETTI@itiscastelli.it
-    cout << crea_email(csv);
+    //cout << crea_email(csv);
     return 0;
 }
