@@ -23,23 +23,59 @@ struct Studente{
 
 //https://forms.gle/MhXRS7fCjqu6acZU8
 
+/*
+    In questo caso il const non può essere utilizzato
+    perchè lo scopo della funzione è proprio quello
+    di modificare il parametro passato come riferimento
+*/
 void muovi_studente(Studente &s)
 {
     s.x += s.dx;
     s.y += s.dy;
-    if (s.x >= get_window_width())
+    //Controllo di uscita dalla parete di destra
+    if (s.x + s.raggio >= get_window_width())
     {
         s.dx = -s.dx;
         s.dy = rand()%3 - 1;
     }
+    //Controllo di uscita dalla parete di sinistra
+    if (s.x - s.raggio <= 0)
+    {
+        s.dx = -s.dx;
+        s.dy = rand()%3 - 1;
+    }
+    //Controllo di uscita dalla parete inferiore
+    if (s.y + s.raggio >= get_window_height())
+    {
+        s.dy = -s.dy;
+        s.dx = rand()%3 - 1;
+    }
+    //Controllo di uscita dalla parete superiore
+    if (s.y - s.raggio <= 0)
+    {
+        s.dy = -s.dy;
+        s.dx = rand()%3 - 1;
+    }
+
 
 }
 
+/*
+    Quando la parola chiave const viene usata per un parametro
+    passato come riferimento il compilatore viene "istruito" a
+    verificare che il parametro passato per riferimento non venga
+    modifica accidentalmente nel codice della funzione
+*/
 void disegna_studente(const Studente &s)
 {
-    draw_image("./images/" + s.immagine,s.x,s.y,s.raggio*2,s.raggio*2,255);
-    int x_testo = s.x;
-    int y_testo = s.y + s.raggio*2;
+    draw_image("./images/" + s.immagine,
+               s.x - s.raggio,
+               s.y - s.raggio,
+               s.raggio*2,
+               s.raggio*2,
+               255);
+    int x_testo = s.x - s.raggio;
+    int y_testo = s.y + s.raggio;
     draw_text("PTMono.ttf",12,s.nome,x_testo, y_testo,Color(0,0,0,255));
 }
 
@@ -90,10 +126,10 @@ int main(int argc, char* argv[]) {
 
     for (int i = 0; i < n_studenti; i++)
     {
-        studenti[i].dx = rand()%3 - 1;
-        studenti[i].dy = rand()%3 - 1;
+        studenti[i].dx = rand()%40 - 20;
+        studenti[i].dy = rand()%40 - 20;
     }
-    studenti[0].dx = 10;
+    //studenti[0].dx = 10;
     //studenti[0].dy = -1;
     //init the library
     init();
