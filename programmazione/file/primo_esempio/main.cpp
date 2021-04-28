@@ -8,10 +8,14 @@ int main()
     string s;
     //input file stream
     //Apertura del file
-    ifstream in("input.txt");
+    ifstream in("input2.txt");
     //Qui andrebbe un controllo per vedere se l'apertura è andata
     //a buon fine
-
+    if (!in)
+    {
+        cout << "Non sono riuscito ad aprire il file" << endl;
+        return -1;
+    }
     //Successivamente all'apertura faccio le operazioni che m'interessano
     string a;
     in >> a;
