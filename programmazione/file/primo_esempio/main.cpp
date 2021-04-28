@@ -13,12 +13,25 @@ int main()
     //a buon fine
 
     //Successivamente all'apertura faccio le operazioni che m'interessano
-    int a;
+    string a;
     in >> a;
     cout << a;
     cin >> a;
     cout << a;
     //Quando il file non serve più lo si chiude
     in.close();
+
+    //output file stream
+    //Apertura del file
+    ofstream out("output.txt");
+    ofstream out2("output2.txt");
+
+    //Successivamente all'apertura faccio le operazioni che m'interessano
+    out << a << " " << a << endl;
+
+    //Quando il file non serve più lo si chiude
+    out.close();
+    out2.close();
+
     return 0;
 }
