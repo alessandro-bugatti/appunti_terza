@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <vector>
+#include <fstream>
 #include "../../vsgl2.h"
 
 using namespace std;
@@ -82,6 +83,39 @@ void disegna_studente(const Studente &s)
 int main(int argc, char* argv[]) {
 
     srand(time(NULL));
+    init();
+    //create the window and show it
+    set_window(1024,700,"3AI game, the best in the town");
+    //main loop
+
+    ifstream in("studenti.txt");
+    if (!in)
+    {
+        cout << "Impossibile aprire il file delle immagini" << endl;
+        close();
+        return -1;
+    }
+    cout << "Inizio" << endl;
+    Studente studenti[30];
+    int n_studenti = 0;
+    string nome, immagine;
+    while(in >> nome >> immagine)
+    {
+        cout << nome << endl;
+        Studente temp;
+        temp.nome = nome;
+        temp.immagine = immagine;
+        temp.x = rand()%get_window_width();
+        temp.y = rand()%get_window_height();
+        temp.raggio = 20;
+        temp.dx = rand()%3 - 1;
+        temp.dy = rand()%3 - 1;
+        studenti[n_studenti] = temp;
+        n_studenti++;
+
+    }
+    in.close();
+    /*
     Studente langellotti = {
         30,
         30,
@@ -117,25 +151,21 @@ int main(int argc, char* argv[]) {
         -1
     };
 
-    Studente studenti[30];
+
     studenti[0] = langellotti;
     studenti[1] = betella;
     studenti[2] = loda;
     studenti[3] = arrivetti;
-    int n_studenti = 4;
+    */
 
-    for (int i = 0; i < n_studenti; i++)
+    /*for (int i = 0; i < n_studenti; i++)
     {
         studenti[i].dx = rand()%40 - 20;
         studenti[i].dy = rand()%40 - 20;
-    }
+    }*/
     //studenti[0].dx = 10;
     //studenti[0].dy = -1;
     //init the library
-    init();
-    //create the window and show it
-    set_window(1024,700,"3AI game, the best in the town");
-    //main loop
 
     while(!done())
     {
