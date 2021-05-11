@@ -125,5 +125,6 @@ int main()
         }
 
     }
+    salva();
     return 0;
 }
