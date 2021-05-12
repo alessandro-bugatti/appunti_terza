@@ -70,18 +70,33 @@ void carica(string nome_file, Libro libri[], int &n_libri)
     }
 }
 
-void salva(...)
+void salva(string nome_file, Libro libri[], int n_libri)
 {
-
+    ofstream out("libri.txt");
+    if (!out)
+    {
+        cout << "Disastro, non sono riuscito a salvare, perdonami." << endl;
+        return;
+    }
+    for (int i = 0; i < n_libri; i++)
+    {
+        out << libri[i].codice << endl;
+        out << libri[i].titolo << endl;
+        out << libri[i].autore << endl;
+        out << libri[i].anno << endl;
+        out << libri[i].editore << endl;
+    }
+    out.close();
 }
 
 int main()
 {
     const int MAX_LIBRI = 100;
+    const string NOME_FILE = "libri.txt";
     Libro libri[MAX_LIBRI];
     int n_libri = 0;
     int scelta = 1;
-    carica("libri.txt", libri, n_libri);
+    carica(NOME_FILE, libri, n_libri);
     while (scelta != 0)
     {
         menu();
@@ -125,6 +140,6 @@ int main()
         }
 
     }
-    salva();
+    salva(NOME_FILE, libri, n_libri);
     return 0;
 }
