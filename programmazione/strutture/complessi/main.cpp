@@ -26,25 +26,21 @@ Complesso differenza(Complesso a, Complesso b)
 
 void stampa(Complesso c)
 {
-    if (c.re != 0 || c.im != 0){
-        if (c.re > 0 && c.im == 1.0)
-            cout << c.re << " + i";
-        else if (c.re > 0 && c.im == -1.0)
-            cout << c.re << " - i";
-        else if (c.re < 0 && c.im == 1.0)
-            cout << c.re << " + i";
-        else if (c.re < 0 && c.im == -1.0)
-            cout << c.re << " - i";
-        else if (c.re > 0 && c.im > 0)
-            cout << c.re << " + " << c.im << "i";
-        else if (c.re < 0 && c.im > 0)
-            cout << c.re << " + " << c.im << "i";
-        else if (c.re > 0 && c.im < 0)
-            cout << c.re << " - " << -c.im << "i";
-        else if (c.re < 0 && c.im < 0)
-            cout << c.re << " - " << -c.im << "i";
+    if (c.re == 0 && c.im == 0)
+        cout << 0;
+    else
+    {
+        if (c.re != 0)
+            cout << c.re << " ";
+        if (c.im == 1.0)
+            cout << "+i";
+        else if (c.im == -1.0)
+            cout << "-i";
+        else if (c.im < 0)
+            cout << "- " << -c.im << "i";
+        else if (c.im > 0)
+            cout << "+ " << c.im << "i";
     }
-
 
 }
 
@@ -67,6 +63,22 @@ int main()
     cout << endl;
     c.re = 0;
     c.im = -1.0;
+    stampa(c);
+    cout << endl;
+    c.re = 0;
+    c.im = 0;
+    stampa(c);
+    cout << endl;
+    c.re = -3.0;
+    c.im = -7.0;
+    stampa(c);
+    cout << endl;
+    c.re = 8;
+    c.im = -1.5;
+    stampa(c);
+    cout << endl;
+    c.re = 0;
+    c.im = 1.0;
     stampa(c);
 
     return 0;
