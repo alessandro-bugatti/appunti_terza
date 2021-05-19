@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <fstream>
 
 using namespace std;
 
@@ -60,7 +61,7 @@ int main()
     int n_punti = 0;
     n_punti = leggi_punti(v);
     Punto c = punto_medio(a,b);
-    cout << c << endl;
+    //NON si può -> cout << c << endl;
     stampa(punto_medio(a,b));
     double d = distanza(a, b);
     cout << d << endl;
