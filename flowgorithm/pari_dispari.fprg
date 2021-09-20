@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-20 12.21.52 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMDktMjA7IjEyLjA4LjI0ICI7MjA5OQ=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMDktMjA7IjEyLjIxLjUyICI7MTsyMjAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, q, resto" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="q" expression="n / 2"/>
+            <assign variable="resto" expression="n - q*2"/>
+            <if expression="resto == 0">
+                <then>
+                    <output expression="n" newline="False"/>
+                    <output expression="&quot; &#232; un numero pari&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="n" newline="False"/>
+                    <output expression="&quot; &#232; un numero dispari&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
