@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-24 12.45.45 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMDktMjQ7IjExLjQ1LjA1ICI7MjEwMg=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMDktMjQ7IjEyLjQ1LjQ1ICI7MzsyMjE3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="h, k, n, contatore, quanti" type="Integer" array="False" size=""/>
+            <assign variable="contatore" expression="0"/>
+            <assign variable="quanti" expression="0"/>
+            <input variable="h"/>
+            <input variable="k"/>
+            <if expression="h &gt; k">
+                <then>
+                    <declare name="temp" type="Integer" array="False" size=""/>
+                    <assign variable="temp" expression="h"/>
+                    <assign variable="h" expression="k"/>
+                    <assign variable="k" expression="temp"/>
+                </then>
+                <else/>
+            </if>
+            <input variable="n"/>
+            <while expression="contatore &lt; n">
+                <declare name="numero" type="Integer" array="False" size=""/>
+                <input variable="numero"/>
+                <if expression="h &lt; numero AND numero &lt; k">
+                    <then>
+                        <assign variable="quanti" expression="quanti + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="contatore" expression="contatore + 1"/>
+            </while>
+            <output expression="quanti" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

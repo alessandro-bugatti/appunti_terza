@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-24 12.18.43 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMDktMjQ7IjExLjQ1LjA1ICI7MjEwMg=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMDktMjQ7IjEyLjE4LjQzICI7MTsyMjEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="k, n, contatore, quanti" type="Integer" array="False" size=""/>
+            <assign variable="contatore" expression="0"/>
+            <assign variable="quanti" expression="0"/>
+            <input variable="k"/>
+            <input variable="n"/>
+            <while expression="contatore &lt; n">
+                <declare name="numero" type="Integer" array="False" size=""/>
+                <input variable="numero"/>
+                <if expression="numero % k == 0">
+                    <then>
+                        <assign variable="quanti" expression="quanti + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="contatore" expression="contatore + 1"/>
+            </while>
+            <output expression="quanti" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
