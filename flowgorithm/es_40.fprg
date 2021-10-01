@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-01 12.44.10 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDE7IjEyLjI0LjM4ICI7MjA5Mw=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDE7IjEyLjQ0LjEwICI7MTsyMTkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, attuale, precedente, massimo, i, tuttiUguali, differenza" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <input variable="precedente"/>
+            <assign variable="tuttiUguali" expression="1"/>
+            <assign variable="massimo" expression="0"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <input variable="attuale"/>
+                <assign variable="differenza" expression="attuale - precedente"/>
+                <if expression="differenza &gt; massimo">
+                    <then>
+                        <assign variable="massimo" expression="differenza"/>
+                        <assign variable="tuttiUguali" expression="0"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="precedente" expression="attuale"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

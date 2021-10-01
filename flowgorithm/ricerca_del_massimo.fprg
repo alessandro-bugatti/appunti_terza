@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-01 12.24.34 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDE7IjEyLjA2LjUwICI7MjA4Nw=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDE7IjEyLjI0LjM0ICI7MTsyMTk3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, numero, massimo, i" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <comment text="Meglio massimo = primo numero inserito"/>
+            <assign variable="massimo" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <input variable="numero"/>
+                <if expression="numero &gt; massimo">
+                    <then>
+                        <assign variable="massimo" expression="numero"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
