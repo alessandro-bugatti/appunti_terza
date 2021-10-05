@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-05 01.37.21 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDU7IjEyLjQyLjE3ICI7MjA5NA=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDU7IjAxLjM3LjIxICI7MTsyMTk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <comment text="Versione con i numeri reali per poter rappresentare pi&#249; chicchi di riso"/>
+            <declare name="chicchi, totale" type="Real" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="chicchi" expression="1"/>
+            <assign variable="totale" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="totale" expression="totale + chicchi"/>
+                <assign variable="chicchi" expression="chicchi * 2"/>
+            </for>
+            <output expression="totale" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

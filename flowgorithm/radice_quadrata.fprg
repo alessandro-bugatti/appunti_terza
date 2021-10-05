@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-05 05.43.58 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDU7IjAxLjM3LjM5ICI7MjEwMA=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDU7IjA1LjQzLjU4ICI7MTsyMjEw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, a, b, m, d" type="Real" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="d" expression="0.0001"/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="n"/>
+            <assign variable="m" expression="(a+b)/2"/>
+            <while expression="b - a &gt; d">
+                <if expression="m*m &gt; n">
+                    <then>
+                        <assign variable="b" expression="m"/>
+                    </then>
+                    <else>
+                        <assign variable="a" expression="m"/>
+                    </else>
+                </if>
+                <assign variable="m" expression="(a+b)/2"/>
+            </while>
+            <output expression="m" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
