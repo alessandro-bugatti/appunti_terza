@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-08 09.29.07 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDg7IjA5LjIzLjI4ICI7MjEwNA=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDg7IjA5LjI5LjA3ICI7MjsyMjE2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, media, somma, quanti" type="Real" array="False" size=""/>
+            <assign variable="somma" expression="0"/>
+            <assign variable="quanti" expression="0"/>
+            <input variable="n"/>
+            <while expression="n &gt; 0">
+                <assign variable="somma" expression="somma + n"/>
+                <assign variable="quanti" expression="quanti + 1"/>
+                <assign variable="media" expression="somma / quanti"/>
+                <output expression="media" newline="True"/>
+                <input variable="n"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
