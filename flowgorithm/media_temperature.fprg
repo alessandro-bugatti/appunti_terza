@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-08 10.23.09 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDg7IjEwLjExLjEyICI7MjA4Ng=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDg7IjEwLjIzLjA5ICI7MTsyMjAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="giorni, i" type="Integer" array="False" size=""/>
+            <declare name="temperatura, somma, media" type="Integer" array="False" size=""/>
+            <assign variable="somma" expression="0"/>
+            <output expression="&quot;Inserisci il numero di giorni del mese&quot;" newline="True"/>
+            <input variable="giorni"/>
+            <while expression="giorni &lt; 28 OR giorni &gt; 31">
+                <output expression="&quot;Il numero deve essere compreso tra 28 e 31!&quot;" newline="True"/>
+                <input variable="giorni"/>
+            </while>
+            <for variable="i" start="1" end="giorni" direction="inc" step="1">
+                <output expression="&quot;Inserisci la temperatura&quot;" newline="True"/>
+                <input variable="temperatura"/>
+                <assign variable="somma" expression="somma + temperatura"/>
+            </for>
+            <assign variable="media" expression="somma / giorni"/>
+            <output expression="media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

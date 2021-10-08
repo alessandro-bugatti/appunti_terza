@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-08 11.34.46 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDg7IjExLjMwLjEwICI7MjA4Ng=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMDg7IjExLjM0LjQ2ICI7MTsyMjA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="giorni" type="Integer" array="False" size=""/>
+            <declare name="temperatura, tmax, tmin" type="Real" array="False" size=""/>
+            <input variable="temperatura"/>
+            <assign variable="tmax" expression="temperatura"/>
+            <assign variable="tmin" expression="temperatura"/>
+            <for variable="i" start="2" end="giorni" direction="inc" step="1">
+                <input variable="temperatura"/>
+                <if expression="temperatura &gt; tmax">
+                    <then>
+                        <assign variable="tmax" expression="temperatura"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="temperatura &lt; tmin">
+                    <then>
+                        <assign variable="tmin" expression="temperatura"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="tmax" newline="True"/>
+            <output expression="tmin" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
