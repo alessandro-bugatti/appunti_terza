@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-11 03.59.04 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMTE7IjAxLjMzLjQ2ICI7MjA5MQ=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMTE7IjAxLjM0LjA4ICI7MTthbGV4XzI7UFVDQ0E7MjAyMS0xMC0xMTsiMDEuMjUuNDQgIjs0MzQ3"/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMTE7IjAzLjU5LjA0ICI7MTsyMjAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a &lt; b">
+                <then>
+                    <if expression="c &lt; a">
+                        <then>
+                            <output expression="c a b" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="c &lt; b">
+                                <then>
+                                    <output expression="a c b" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="a b c" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

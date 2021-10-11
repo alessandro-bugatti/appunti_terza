@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-11 03.27.58 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMTE7IjAxLjE3LjA5ICI7MjA5Mg=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMTE7IjAzLjI3LjU4ICI7MTsyMjA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <if expression="n % 2 == 0">
+                <then>
+                    <output expression="&quot;Il numero &#232; pari&quot;" newline="True"/>
+                    <if expression="n % 4 == 0">
+                        <then>
+                            <output expression="&quot; ed &#232; anche divisibile per 4&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; ma non divisibile per 4&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Il numero &#232; dispari&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

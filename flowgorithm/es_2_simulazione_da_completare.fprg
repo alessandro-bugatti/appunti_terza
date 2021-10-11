@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-11 03.28.42 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMTE7IjAxLjI1LjQ0ICI7MjA5MA=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMTE7IjAzLjI4LjQyICI7MTsyMjAx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a &lt;= b &amp;&amp; b &lt;= c">
+                <then>
+                    <output expression="a" newline="True"/>
+                    <output expression="b" newline="True"/>
+                    <output expression="c" newline="True"/>
+                </then>
+                <else>
+                    <if expression="b &lt;= a &amp;&amp; a &lt;= c">
+                        <then>
+                            <output expression="b" newline="True"/>
+                            <output expression="a" newline="True"/>
+                            <output expression="c" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
