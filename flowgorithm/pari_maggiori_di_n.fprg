@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex_2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-15 10.41.08 "/>
+        <attribute name="created" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMTU7IjEyLjE4LjQ4ICI7MjEwMg=="/>
+        <attribute name="edited" value="YWxleF8yO1BVQ0NBOzIwMjEtMTAtMTU7IjEwLjQxLjA4ICI7MTsyMjAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A, N, somma, i" type="Integer" array="False" size=""/>
+            <assign variable="somma" expression="0"/>
+            <input variable="A"/>
+            <input variable="N"/>
+            <if expression="A % 2 != 0">
+                <then>
+                    <assign variable="A" expression="A + 1"/>
+                </then>
+                <else/>
+            </if>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <assign variable="somma" expression="somma + A"/>
+                <assign variable="A" expression="A + 2"/>
+            </for>
+            <output expression="somma" newline="True"/>
+            <output expression="somma / N" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
