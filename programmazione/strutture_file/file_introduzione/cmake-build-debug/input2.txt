@@ -1,0 +1,5 @@
+Questo è un file di testo
+di cui non si sanno le righe e
+che può contenere qualsiasi cosa,
+anche numeri come 123 o 345.5
+viene letto come una serie di stringhe
