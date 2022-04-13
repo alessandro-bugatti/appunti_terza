@@ -82,6 +82,24 @@ int main() {
         stampa_campi(csv);
     }
 
+    //Esempio con input numerico
+    //Con questa istruzione si associa un file di input, in questo caso input.txt
+    //all'oggetto, una variabile di nome in, che verrà successivamente
+    //utilizzata per tutte operazioni di input sul file
+    ifstream in4("input4.txt");
+    //Controllo se l'apertura del file non è riuscita e, in questo caso,
+    //si termina il programma, ma si potrebbe anche decidere di fare altro
+    if (!in4)
+    {
+        cout << "Errore nell'apertura del file" << endl;
+        return 1;
+    }
+    //Metodo di lettura per dati numerici, se non è presente un primo numero
+    //che dice quanti sono, bisogna leggere fino alla fine
+    float temp;
+    while(in4 >> temp)
+        cout  << temp << endl;
+
     //Esempio con output, valgono le stesse considerazioni generali fatte per l'input
     ofstream out("output.txt");
     //Controlla se l'apertura avviene: un file in scrittura non viene creato
