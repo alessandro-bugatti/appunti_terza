@@ -1,0 +1,3 @@
+Fiat;1500;2020;Aldo;Giorni
+Fiat;2000;2010;Anna;Bigni
+Nissan;1200;2018;Elena;Mordini
