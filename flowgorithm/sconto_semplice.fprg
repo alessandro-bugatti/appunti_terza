@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-17 12:53:17 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0wOS0xNzsiMTE6Mjc6NDggIjsyMDcy"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0wOS0xNzsiMTI6NTM6MTcgIjsxOzIxNzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qta" type="Integer" array="False" size=""/>
+            <declare name="costoUnitario, costoTotale" type="Real" array="False" size=""/>
+            <input variable="costoUnitario"/>
+            <input variable="qta"/>
+            <if expression="qta &gt; 10">
+                <then>
+                    <assign variable="costoTotale" expression="costoUnitario * qta * 0.9"/>
+                </then>
+                <else>
+                    <assign variable="costoTotale" expression="costoUnitario * qta"/>
+                </else>
+            </if>
+            <output expression="costoTotale" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
