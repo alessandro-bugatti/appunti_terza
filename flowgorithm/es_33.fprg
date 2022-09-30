@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-30 09:45:56 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0wOS0zMDsiMDk6MTQ6MjIgIjsyMDYy"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0wOS0zMDsiMDk6NDU6NTYgIjsxOzIxODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="k, n, maggiori, numero, contatore" type="Integer" array="False" size=""/>
+            <input variable="k"/>
+            <input variable="n"/>
+            <assign variable="maggiori" expression="0"/>
+            <assign variable="contatore" expression="0"/>
+            <while expression="contatore &lt; n">
+                <input variable="numero"/>
+                <if expression="numero &gt; k">
+                    <then>
+                        <assign variable="maggiori" expression="maggiori + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="contatore" expression="contatore + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

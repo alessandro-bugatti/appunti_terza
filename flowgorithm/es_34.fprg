@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-30 10:33:47 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0wOS0zMDsiMTA6MTY6MTMgIjsyMDU2"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0wOS0zMDsiMTA6MzM6NDcgIjsyOzIxNzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="k, n, maggiori, uguali, minori, i, numero" type="Integer" array="False" size=""/>
+            <input variable="k"/>
+            <input variable="n"/>
+            <assign variable="maggiori" expression="0"/>
+            <assign variable="minori" expression="0"/>
+            <assign variable="uguali" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <input variable="numero"/>
+                <if expression="numero &gt; k">
+                    <then>
+                        <assign variable="maggiori" expression="maggiori + 1"/>
+                    </then>
+                    <else>
+                        <if expression="numero == k">
+                            <then>
+                                <assign variable="uguali" expression="uguali + 1"/>
+                            </then>
+                            <else>
+                                <assign variable="minori" expression="minori + 1"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="maggiori" newline="True"/>
+            <output expression="uguali" newline="True"/>
+            <output expression="minori" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

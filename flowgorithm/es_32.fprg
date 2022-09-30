@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-28 12:07:55 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0wOS0yODsiMTE6Mjk6MTQgIjsyMDY5"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0wOS0yODsiMTI6MDc6NTUgIjsxOzIxNzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, contatore, somma" type="Integer" array="False" size=""/>
+            <assign variable="contatore" expression="0"/>
+            <assign variable="somma" expression="0"/>
+            <input variable="N"/>
+            <while expression="N != 0">
+                <assign variable="somma" expression="somma + N"/>
+                <assign variable="contatore" expression="contatore + 1"/>
+                <input variable="N"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
