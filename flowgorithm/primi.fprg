@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-01 10:38:33 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0xMC0wMTsiMDk6MDk6MzAgIjsyMDU1"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0xMC0wMTsiMTA6Mzg6MzMgIjsyOzIxNjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, divisore" type="Integer" array="False" size=""/>
+            <declare name="primo" type="Boolean" array="False" size=""/>
+            <assign variable="primo" expression="true"/>
+            <input variable="n"/>
+            <for variable="divisore" start="2" end="sqrt(n)" direction="inc" step="1">
+                <if expression="n % divisore == 0">
+                    <then>
+                        <assign variable="primo" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="primo == true">
+                <then>
+                    <output expression="&quot;Il numero &#232; primo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Il numero non &#232; primo&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

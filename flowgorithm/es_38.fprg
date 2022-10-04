@@ -4,18 +4,36 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="alex"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-09-30 10:53:30 "/>
+        <attribute name="saved" value="2022-10-01 08:39:37 "/>
         <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0wOS0zMDsiMTA6NDI6MDYgIjsyMDU3"/>
-        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0wOS0zMDsiMTA6NTM6MzAgIjsyOzIxNjU="/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0xMC0wMTsiMDg6Mzk6MzcgIjszOzIxNzQ="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="n, numero, i" type="Integer" array="False" size=""/>
+            <declare name="n, numero, i, precedente" type="Integer" array="False" size=""/>
+            <declare name="crescente" type="Boolean" array="False" size=""/>
             <input variable="n"/>
-            <for variable="i" start="1" end="n" direction="inc" step="1">
+            <input variable="precedente"/>
+            <assign variable="crescente" expression="true"/>
+            <for variable="i" start="2" end="n" direction="inc" step="1">
                 <input variable="numero"/>
+                <if expression="numero &lt;= precedente">
+                    <then>
+                        <assign variable="crescente" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="precedente" expression="numero"/>
             </for>
+            <if expression="crescente == true">
+                <then>
+                    <output expression="&quot;Crescente&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Non crescente&quot;" newline="True"/>
+                </else>
+            </if>
         </body>
     </function>
 </flowgorithm>
