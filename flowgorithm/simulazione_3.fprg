@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-07 10:39:46 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0xMC0wNzsiMTA6MjU6MjQgIjsyMDU0"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0xMC0wNzsiMTA6Mzk6NDYgIjsxOzIxNzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="altezzaIniziale, altezzaFinale, crescita" type="Real" array="False" size=""/>
+            <declare name="mesi, i" type="Integer" array="False" size=""/>
+            <input variable="altezzaIniziale"/>
+            <input variable="mesi"/>
+            <assign variable="altezzaFinale" expression="altezzaIniziale"/>
+            <assign variable="crescita" expression="altezzaIniziale / 2"/>
+            <for variable="i" start="1" end="mesi" direction="inc" step="1">
+                <assign variable="altezzaFinale" expression="altezzaFinale + crescita"/>
+                <assign variable="crescita" expression="crescita / 2"/>
+            </for>
+            <output expression="altezzaFinale" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-07 10:08:42 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0xMC0wNzsiMTA6MDI6MTMgIjsyMDQ3"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0xMC0wNzsiMTA6MDg6NDIgIjsxOzIxNjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <if expression="N % 2 == 0">
+                <then>
+                    <if expression="N % 4 == 0">
+                        <then>
+                            <output expression="&quot;Il numero &#232; pari e anche multiplo di quattro&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Il numero &#232; pari ma non multiplo di quattro&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Il numero &#232; dispari&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

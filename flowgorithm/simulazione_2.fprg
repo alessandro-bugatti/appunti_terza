@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-07 10:23:59 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0xMC0wNzsiMTA6MDk6MDAgIjsyMDUw"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0xMC0wNzsiMTA6MjM6NTkgIjsxOzIxNjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A, B, C, temp" type="Integer" array="False" size=""/>
+            <input variable="A"/>
+            <input variable="B"/>
+            <input variable="C"/>
+            <if expression="A &gt; B">
+                <then>
+                    <assign variable="temp" expression="A"/>
+                    <assign variable="A" expression="B"/>
+                    <assign variable="B" expression="temp"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="A &gt; C">
+                <then>
+                    <assign variable="temp" expression="A"/>
+                    <assign variable="A" expression="C"/>
+                    <assign variable="C" expression="temp"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="B &gt; C">
+                <then>
+                    <assign variable="temp" expression="C"/>
+                    <assign variable="C" expression="B"/>
+                    <assign variable="B" expression="temp"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="A" newline="True"/>
+            <output expression="B" newline="True"/>
+            <output expression="C" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
