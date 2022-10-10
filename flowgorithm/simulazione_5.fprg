@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-10 01:40:23 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0xMC0xMDsiMDE6MTQ6MDQgIjsyMDQ0"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0xMC0xMDsiMDE6NDA6MjMgIjsxOzIxNTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, numero, precedente, i, crescenti, massimo" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <input variable="precedente"/>
+            <assign variable="crescenti" expression="1"/>
+            <assign variable="massimo" expression="1"/>
+            <for variable="i" start="2" end="n" direction="inc" step="1">
+                <input variable="numero"/>
+                <if expression="precedente &lt; numero">
+                    <then>
+                        <comment text="Aumenta il conteggio dei numeri crescenti"/>
+                        <assign variable="crescenti" expression="crescenti + 1"/>
+                    </then>
+                    <else>
+                        <if expression="crescenti &gt; massimo">
+                            <then>
+                                <assign variable="massimo" expression="crescenti"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="crescenti" expression="1"/>
+                    </else>
+                </if>
+                <comment text="Viene tenuto da parte il numero che al prossimo giro sar&#224; il valore precedente"/>
+                <assign variable="precedente" expression="numero"/>
+            </for>
+            <if expression="crescenti &gt; massimo">
+                <then>
+                    <assign variable="massimo" expression="crescenti"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="massimo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

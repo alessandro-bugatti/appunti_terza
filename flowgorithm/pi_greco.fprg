@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-10 02:55:57 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0xMC0xMDsiMDE6NDU6MDkgIjsyMDUz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0xMC0xMDsiMDI6NTU6NTcgIjsxOzIxNjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nTermini, n, segno" type="Integer" array="False" size=""/>
+            <declare name="risultato" type="Real" array="False" size=""/>
+            <input variable="nTermini"/>
+            <assign variable="risultato" expression="0"/>
+            <assign variable="segno" expression="1"/>
+            <for variable="n" start="0" end="nTermini " direction="inc" step="1">
+                <assign variable="risultato" expression="risultato + segno / (2 * n + 1)"/>
+                <assign variable="segno" expression="-segno"/>
+            </for>
+            <output expression="risultato * 4" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

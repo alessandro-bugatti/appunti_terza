@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-10 12:53:18 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0xMC0xMDsiMTI6MzY6NTAgIjsyMDUx"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0xMC0xMDsiMTI6NTM6MTggIjsxOzIxNjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="k, risultato" type="Real" array="False" size=""/>
+            <input variable="n"/>
+            <input variable="k"/>
+            <assign variable="risultato" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="risultato" expression="risultato + i^k"/>
+            </for>
+            <output expression="risultato" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

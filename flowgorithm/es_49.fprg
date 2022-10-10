@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-10 01:14:01 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMi0xMC0xMDsiMTI6NTM6MzYgIjsyMDU0"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMi0xMC0xMDsiMDE6MTQ6MDEgIjsxOzIxNDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="distanza, distanzaEffettiva, spostamento" type="Real" array="False" size=""/>
+            <declare name="nSpostamenti, i" type="Integer" array="False" size=""/>
+            <input variable="distanza"/>
+            <input variable="nSpostamenti"/>
+            <assign variable="spostamento" expression="distanza / 2"/>
+            <assign variable="distanzaEffettiva" expression="0"/>
+            <for variable="i" start="1" end="nSpostamenti" direction="inc" step="1">
+                <assign variable="distanzaEffettiva" expression="distanzaEffettiva + spostamento"/>
+                <assign variable="spostamento" expression="spostamento / 2"/>
+            </for>
+            <output expression="distanzaEffettiva" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
