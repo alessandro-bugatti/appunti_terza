@@ -27,9 +27,16 @@ int potenza_di_due(int n) //Firma della funzione
 float potenza_intera(float base, int esp)//Parametri formali
 {
     float risultato = 1;
+    bool negativo = false;
+    if (esp < 0){
+        esp = -esp;
+        negativo = true;
+    }
     for (int i = 0; i < esp; ++i) {
         risultato *= base;
     }
+    if (negativo)
+        return 1/risultato;
     return risultato;
 }
 
