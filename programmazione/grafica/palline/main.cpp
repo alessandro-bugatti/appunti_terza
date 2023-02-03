@@ -36,13 +36,19 @@ int main(void)
     {
         // Update
         //----------------------------------------------------------------------------------
-        
+
         for (int i = 0; i< N_PALLINE; i++) {
             pos[i].x += vel[i].x;
             pos[i].y += vel[i].y;
             //Da completare
             if (pos[i].x > GetScreenWidth())
                 vel[i].x *= -1;
+            if (pos[i].x < 0)
+                vel[i].x *= -1;
+            if (pos[i].y > GetScreenHeight())
+                vel[i].y *= -1;
+            if (pos[i].y < 0)
+                vel[i].y *= -1;
         }
 
         // Draw
