@@ -21,6 +21,24 @@ void menu(){
 
 void stampa_sistema(const Sistema &casa){
     std::cout << "Attualmente ci sono " << casa.n_lampadine << " lampadine" << std::endl;
+    for (int i = 0; i < casa.n_lampadine; ++i) {
+        std::cout << casa.lampadine[i].nome << " " << casa.lampadine[i].intensita << std::endl;
+    }
+}
+
+void elenco_lampadine(const Sistema &s){
+    std::cout << "Elenco lamapadine" << std::endl;
+    for (int i = 0; i < s.n_lampadine; ++i) {
+        std::cout << s.lampadine[i].nome << std::endl;
+    }
+}
+
+int cerca_lampadina(const Sistema &s, const std::string &n){
+    for (int i = 0; i < s.n_lampadine; ++i) {
+        if (s.lampadine[i].nome == n)
+            return i;
+    }
+    return -1;
 }
 
 int main() {
@@ -46,6 +64,14 @@ int main() {
                 }
                 break;
             case 2:
+                {
+                    std::cout << "Scegli la lampadina di cui vuoi cambiare la potenza" << std::endl;
+                    elenco_lampadine(casa);
+                    std::string nome;
+                    std::cin >> nome;
+                    int posizione = cerca_lampadina(casa, nome);
+                    //Parte di gestione dell'intensità, da fare
+                }
                 break;
             default:
                 std::cout << "Scelta non corretta" << std::endl;
