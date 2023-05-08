@@ -41,6 +41,17 @@ int cerca_lampadina(const Sistema &s, const std::string &n){
     return -1;
 }
 
+bool rimuovi_lampadina(Sistema &s, const std::string &n){
+    int posizione = cerca_lampadina(s, n);
+    if (posizione == -1)
+        return false;
+    for (int i = posizione; i < s.n_lampadine - 1; i++){
+        s.lampadine[i] = s.lampadine[i+1];
+    }
+    s.n_lampadine--;
+    return true;
+}
+
 int main() {
     int scelta;
     Sistema casa;
@@ -72,6 +83,22 @@ int main() {
                     int posizione = cerca_lampadina(casa, nome);
                     //Parte di gestione dell'intensità, da fare
                 }
+                break;
+            case 6:
+            {
+                std::cout << "Scegli la lampadina da rimuovere" << std::endl;
+                elenco_lampadine(casa);
+                std::string nome;
+                std::cin >> nome;
+
+                //Parte di rimozione
+                if (rimuovi_lampadina(casa, nome) ){
+                    std::cout << "Lampadina rimossa" << std::endl;
+                }
+                else{
+                    std::cout << "Lampadina non presente" << std::endl;
+                }
+            }
                 break;
             default:
                 std::cout << "Scelta non corretta" << std::endl;
