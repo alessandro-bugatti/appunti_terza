@@ -73,5 +73,27 @@ int main() {
         std::cout << valore << std::endl;
     }
     in5.close();
+    std::ifstream in6("../testo.txt");
+    if (!in6){
+        std::cout << "Apertura fallita" << std::endl;
+        return 1;
+    }
+    std::string riga;
+    int n_riga = 1;
+    while(std::getline(in6, riga)){
+        std::cout << n_riga << ") " << riga << std::endl;
+        n_riga++;
+    }
+    in6.close();
+    //Esempio di scrittura
+    std::ofstream out("../casuali.txt");
+    if (!out){
+        std::cout << "Apertura fallita" << std::endl;
+        return 1;
+    }
+    for (int i = 0; i < 10; ++i) {
+        out << rand()%100 << std::endl;
+    }
+    //out.close();
     return 0;
 }
