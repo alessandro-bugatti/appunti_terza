@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 struct Lampadina{
     int potenza;
@@ -56,6 +57,22 @@ int main() {
     int scelta;
     Sistema casa;
     casa.n_lampadine = 0;
+    //Caricamento
+    std::ifstream in("../domotica.txt");
+    //Se l'apertura riesce allora carico i dati
+    if (in){
+        int conta = 0;
+        while(in >> casa.lampadine[conta].potenza){
+            in >> casa.lampadine[conta].colore;
+            in >> casa.lampadine[conta].intensita;
+            in >> casa.lampadine[conta].accesa;
+            in >> casa.lampadine[conta].nome;
+            conta++;
+        }
+        casa.n_lampadine = conta;
+        in.close();
+    }
+
     menu();
     std::cout << "Scegli cosa fare: ";
     std::cin >> scelta;
@@ -108,6 +125,19 @@ int main() {
         std::cout << "Scegli cosa fare: ";
         std::cin >> scelta;
     }
-
+    //Salvataggio
+    std::ofstream out("../domotica.txt");
+    if(!out){
+        std::cout << "Il tuo lavoro di questa sessione è andato perso! :-(" << std::endl;
+        return 1;
+    }
+    for (int i = 0; i < casa.n_lampadine; ++i){
+      out << casa.lampadine[i].potenza << "-";
+      out << casa.lampadine[i].colore << "-";
+      out << casa.lampadine[i].intensita << "-";
+      out << casa.lampadine[i].accesa << "-";
+      out << casa.lampadine[i].nome << std::endl;
+    }
+    out.close();
     return 0;
 }
