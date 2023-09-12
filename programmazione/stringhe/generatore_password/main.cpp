@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 char genera_carattere(){
     char c = rand() % (125 - 33 - 1) + 33;
@@ -16,7 +17,11 @@ std::string genera_password(int lunghezza){
 }
 
 int main() {
-    std::string password = genera_password(12);
+    srand(time(NULL));
+    int n;
+    std::cout << "Inserisci la lunghezza della password da generare: ";
+    std::cin >> n;
+    std::string password = genera_password(n);
     std::cout << password << std::endl;
     return 0;
 }
