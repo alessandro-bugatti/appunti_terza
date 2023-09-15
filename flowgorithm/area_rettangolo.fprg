@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-15 05:46:45 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0xNTsiMDg6Mjc6MDMgIjsyMDY4"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0xNTsiMDU6NDY6NDUgIjsxOzIxODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="base" type="Real" array="False" size=""/>
+            <declare name="altezza" type="Real" array="False" size=""/>
+            <declare name="area" type="Real" array="False" size=""/>
+            <input variable="base"/>
+            <input variable="altezza"/>
+            <assign variable="area" expression="base * altezza"/>
+            <output expression="area" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
