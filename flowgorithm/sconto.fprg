@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 09:17:10 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0xNjsiMDg6MzM6MjYgIjsyMDcx"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0xNjsiMDk6MTc6MTAgIjsyOzIxNzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numeroPezzi" type="Integer" array="False" size=""/>
+            <declare name="costoUnitario, costoTotale, sconto" type="Real" array="False" size=""/>
+            <input variable="costoUnitario"/>
+            <input variable="numeroPezzi"/>
+            <if expression="numeroPezzi &gt; 10">
+                <then>
+                    <assign variable="sconto" expression="0.1"/>
+                </then>
+                <else>
+                    <assign variable="sconto" expression="0"/>
+                </else>
+            </if>
+            <assign variable="costoTotale" expression="costoUnitario * numeroPezzi * (1 - sconto)"/>
+            <output expression="costoTotale" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

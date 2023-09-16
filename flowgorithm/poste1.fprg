@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 09:31:00 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0xNjsiMDk6MTc6MTMgIjsyMDcw"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0xNjsiMDk6MzE6MDAgIjsxOzIxNzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tipoTariffa" type="Integer" array="False" size=""/>
+            <declare name="peso, costoKilo, costoFisso, costoTotale" type="Real" array="False" size=""/>
+            <input variable="tipoTariffa"/>
+            <input variable="peso"/>
+            <if expression="tipoTariffa == 1">
+                <then>
+                    <assign variable="costoKilo" expression="3"/>
+                    <assign variable="costoFisso" expression="3"/>
+                </then>
+                <else>
+                    <if expression="tipoTariffa == 2">
+                        <then>
+                            <assign variable="costoKilo" expression="4"/>
+                            <assign variable="costoFisso" expression="7"/>
+                        </then>
+                        <else>
+                            <assign variable="costoKilo" expression="6"/>
+                            <assign variable="costoFisso" expression="13"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="costoTotale" expression="peso * costoKilo + costoFisso"/>
+        </body>
+    </function>
+</flowgorithm>
