@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-20 12:34:34 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yMDsiMTI6MDc6NDkgIjsyMDY3"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yMDsiMTI6MzQ6MzQgIjsxOzIxNjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="costoAbbonamento, costoBiglietto, prezzoTotale" type="Real" array="False" size=""/>
+            <declare name="numeroBiglietti" type="Integer" array="False" size=""/>
+            <input variable="costoAbbonamento"/>
+            <input variable="costoBiglietto"/>
+            <input variable="numeroBiglietti"/>
+            <while expression="numeroBiglietti &gt; 10">
+                <output expression="&quot;Acquistare al massimo 10 biglietti&quot;" newline="True"/>
+                <input variable="numeroBiglietti"/>
+            </while>
+            <assign variable="prezzoTotale" expression="numeroBiglietti * costoBiglietto"/>
+            <if expression="prezzoTotale &lt; costoAbbonamento">
+                <then>
+                    <output expression="&quot; conviene acquistare i biglietti &quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot; conviene acquistare l'abbonamento &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

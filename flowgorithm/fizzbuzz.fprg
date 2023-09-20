@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-20 12:52:59 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yMDsiMTI6Mzg6MDIgIjsyMDYw"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yMDsiMTI6NTI6NTkgIjsxOzIxNzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <if expression="N % 3 == 0">
+                <then>
+                    <output expression="&quot;Fizz&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="N % 5 == 0">
+                <then>
+                    <output expression="&quot;Buzz&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

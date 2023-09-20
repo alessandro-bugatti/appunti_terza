@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-18 11:51:20 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0xODsiMTE6MTE6MjIgIjsyMDU5"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0xODsiMTE6NTE6MjAgIjsxOzIxNjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numeroVoti" type="Integer" array="False" size=""/>
+            <declare name="voto, sommaVoti, mediaVoti" type="Real" array="False" size=""/>
+            <assign variable="numeroVoti" expression="0"/>
+            <assign variable="sommaVoti" expression="0"/>
+            <input variable="voto"/>
+            <while expression="voto != 0">
+                <assign variable="sommaVoti" expression="sommaVoti + voto"/>
+                <assign variable="numeroVoti" expression="numeroVoti + 1"/>
+                <input variable="voto"/>
+            </while>
+            <assign variable="mediaVoti" expression="sommaVoti / numeroVoti"/>
+            <output expression="mediaVoti" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
