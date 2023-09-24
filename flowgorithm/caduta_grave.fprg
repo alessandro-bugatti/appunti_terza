@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-22 08:42:58 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yMjsiMDg6MTA6MzcgIjsyMDY1"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yMjsiMDg6NDI6NTggIjsxOzIxODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="s, t, g, h, posizione, dT" type="Real" array="False" size=""/>
+            <input variable="h"/>
+            <assign variable="g" expression="9.81"/>
+            <assign variable="t" expression="0"/>
+            <assign variable="dT" expression="0.1"/>
+            <assign variable="posizione" expression="h"/>
+            <while expression="posizione &gt; 0">
+                <output expression="posizione" newline="True"/>
+                <assign variable="s" expression="0.5 * g * t * t"/>
+                <assign variable="posizione" expression="h - s"/>
+                <assign variable="t" expression="t + dT"/>
+            </while>
+            <output expression="&quot; il tempo di caduta &#232; &quot;" newline="False"/>
+            <output expression="t" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
