@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-25 11:24:26 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNTsiMTE6MTA6MDkgIjsyMDYx"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNTsiMTE6MjQ6MjYgIjsxOzIxNzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Qiniziale, Tempo, Tdecadimento, Qfinale" type="Real" array="False" size=""/>
+            <output expression="&quot;Immeti la quantita di cesio-137&quot;" newline="True"/>
+            <input variable="Qiniziale"/>
+            <assign variable="Tempo" expression="0"/>
+            <assign variable="Tdecadimento" expression="30"/>
+            <while expression="Qiniziale&gt;=0.001">
+                <assign variable="Qiniziale" expression="Qiniziale*0.5"/>
+                <assign variable="Tempo" expression="Tempo+Tdecadimento"/>
+            </while>
+            <output expression="&quot;Il tempo impiegato e di:&quot;" newline="True"/>
+            <output expression="Tempo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
