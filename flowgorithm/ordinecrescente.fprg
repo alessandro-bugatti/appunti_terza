@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-27 12:28:18 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNzsiMTE6NTk6MjEgIjsyMDcw"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNzsiMTI6Mjg6MTggIjszOzIxODM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, numero, precedente" type="Integer" array="False" size=""/>
+            <declare name="ordine" type="Boolean" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="ordine" expression="true"/>
+            <input variable="precedente"/>
+            <while expression="N &gt; 1">
+                <input variable="numero"/>
+                <if expression="precedente &gt;= numero">
+                    <then>
+                        <assign variable="ordine" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="precedente" expression="numero"/>
+                <assign variable="N" expression="N - 1"/>
+            </while>
+            <if expression="ordine == true">
+                <then>
+                    <output expression="&quot;Sono in ordine crescente&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Non sono in ordine crescente&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
