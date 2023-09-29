@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-29 08:42:34 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yOTsiMDg6MjI6MjUgIjsyMDcy"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yOTsiMDg6NDI6MzQgIjsxOzIxODI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, risultato, precedente1, precedente2" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="precedente1" expression="1"/>
+            <assign variable="precedente2" expression="0"/>
+            <if expression="n&lt;=1">
+                <then>
+                    <assign variable="risultato" expression="n"/>
+                </then>
+                <else>
+                    <for variable="i" start="2" end="n" direction="inc" step="1">
+                        <assign variable="risultato" expression="precedente1 + precedente2"/>
+                        <assign variable="precedente2" expression="precedente1"/>
+                        <assign variable="precedente1" expression="risultato"/>
+                    </for>
+                </else>
+            </if>
+            <output expression="risultato" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
