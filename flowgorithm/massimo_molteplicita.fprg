@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-02 11:59:10 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0xMC0wMjsiMTE6MzM6NDIgIjsyMDUw"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0xMC0wMjsiMTE6NTk6MTAgIjsxOzIxNjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, numero1, numero2, magg, moltiplicit&#224;, i" type="Integer" array="False" size=""/>
+            <assign variable="molteplicit&#224;" expression="1"/>
+            <input variable="N"/>
+            <input variable="magg"/>
+            <for variable="i" start="2" end="N" direction="inc" step="1">
+                <input variable="numero2"/>
+                <if expression="magg != numero2">
+                    <then>
+                        <if expression="magg &lt; numero2">
+                            <then>
+                                <assign variable="magg" expression="numero2"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="molteplicit&#224;" expression="1"/>
+                    </then>
+                    <else>
+                        <assign variable="molteplicit&#224;" expression="molteplicit&#224; + 1"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="magg" newline="True"/>
+            <output expression="molteplicit&#224;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

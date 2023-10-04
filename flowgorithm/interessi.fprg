@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-04 12:22:52 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0xMC0wNDsiMTI6MDk6MTUgIjsyMDU2"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0xMC0wNDsiMTI6MjI6NTIgIjsxOzIxNjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cap, perc" type="Real" array="False" size=""/>
+            <declare name="nAnni, interessi, i" type="Integer" array="False" size=""/>
+            <input variable="cap"/>
+            <input variable="interessi"/>
+            <input variable="nAnni"/>
+            <for variable="i" start="1" end="nAnni" direction="inc" step="1">
+                <assign variable="perc" expression="(cap / 100) * interessi"/>
+                <assign variable="cap" expression="cap + perc"/>
+            </for>
+            <output expression="cap" newline="True"/>
+            <assign variable="cap" expression="cap * (1 + interessi / 100) * nAnni"/>
+        </body>
+    </function>
+</flowgorithm>

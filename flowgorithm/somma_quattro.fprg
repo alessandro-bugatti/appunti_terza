@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-02 11:29:32 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0xMC0wMjsiMTE6MTc6NDMgIjsyMDUz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0xMC0wMjsiMTE6Mjk6MzIgIjsxOzIxNjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, numero, somma, i, conto" type="Integer" array="False" size=""/>
+            <assign variable="somma" expression="0"/>
+            <input variable="N"/>
+            <assign variable="conto" expression="N"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <input variable="numero"/>
+                <assign variable="somma" expression="somma+numero"/>
+                <if expression="i%4==0">
+                    <then>
+                        <output expression="somma" newline="True"/>
+                        <assign variable="somma" expression="0"/>
+                        <assign variable="conto" expression="conto-4"/>
+                    </then>
+                    <else>
+                        <if expression="N==i">
+                            <then>
+                                <output expression="somma" newline="True"/>
+                                <output expression="conto" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
