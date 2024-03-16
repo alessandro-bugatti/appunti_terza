@@ -17,7 +17,7 @@ int main() {
     pos = s.find("cavolo");
     std::cout << "cavolo di trova in posizione " << pos << std::endl;
     if (pos == std::string::npos){
-        std::cout << "La parola cavolo qunidi non è presente." << std::endl;
+        std::cout << "La parola cavolo quindi non è presente." << std::endl;
     }
     return 0;
 }
