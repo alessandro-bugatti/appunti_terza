@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(attenti_al_mostro main.cpp)
 
-target_link_libraries(attenti_al_mostro LINK_PUBLIC  raylib opengl32 gdi32 winmm)
+find_library(RAYLIBRARY raylib lib)
+
+target_link_libraries(attenti_al_mostro LINK_PUBLIC ${RAYLIBRARY} winmm)
