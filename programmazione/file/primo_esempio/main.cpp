@@ -16,8 +16,18 @@ int main() {
     }
 
     int n;
-    in >> n;
+    float f;
+    std::string s;
+    in >> n >> f >> s;
     std::cout << "Il numero letto è " << n << std::endl;
+    std::cout << "Il float letto è " << f << std::endl;
+    std::cout << "La stringa letta è " << s << std::endl;
 
+    out << "Ciao" << std::endl;
+    for (int i = 0; i < 10; ++i) {
+        out << (i+1) << std::endl;
+    }
+    in.close();
+    out.close();
     return 0;
 }
