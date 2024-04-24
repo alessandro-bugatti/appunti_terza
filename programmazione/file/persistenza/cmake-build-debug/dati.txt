@@ -1,0 +1,8 @@
+2
+Alessandro;Bugatti;19;6;2008;3;A;2
+7.5;Informatica;11;1;2024
+6.5;Italiano;23;2;2024
+Cristina;Bilocchi;22;6;2008;3;A;3
+8.5;Informatica;11;1;2024
+8.5;Italiano;1;3;2024
+9;Sistemi e reti;4;4;2024
