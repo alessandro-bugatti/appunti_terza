@@ -68,8 +68,7 @@ std::vector<Studente> carica(const std::string &nome_file) {
         }
         v.push_back(s);
     }
-
-
+    in.close();
     return v;
 }
 
