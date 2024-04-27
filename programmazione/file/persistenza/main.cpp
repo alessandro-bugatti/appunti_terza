@@ -72,6 +72,35 @@ std::vector<Studente> carica(const std::string &nome_file) {
     return v;
 }
 
+bool salva(const std::string &nomefile,
+    const std::vector<Studente> &studenti) {
+    std::ofstream out(nomefile);
+    if (!out) {
+        return false;
+    }
+    out << studenti.size() << std::endl;
+    for (int i = 0; i < studenti.size(); ++i) {
+        out << studenti.at(i).nome << ";"
+            << studenti.at(i).cognome << ";"
+            << studenti.at(i).nascita.giorno << ";"
+            << studenti.at(i).nascita.mese << ";"
+            << studenti.at(i).nascita.anno << ";"
+            << studenti.at(i).classe << ";"
+            << studenti.at(i).sezione << ";"
+            << studenti.at(i).valutazioni.size() << std::endl;
+        for (int j = 0; j < studenti.at(i).valutazioni.size(); ++j) {
+            Valutazione temp = studenti.at(i).valutazioni.at(j);
+            out << temp.voto << ";"
+                << temp.materia << ";"
+                << temp.data.giorno << ";"
+                << temp.data.mese << ";"
+                << temp.data.anno << std::endl;
+        }
+    }
+    out.close();
+    return true;
+}
+
 int main()
 {
     // std::vector<std::string> v;
@@ -80,6 +109,17 @@ int main()
     //     std::cout << v.at(i) << std::endl;
 
     std::vector<Studente> studenti = carica("dati.txt");
-
+    //Programma vero e proprio
+    // Valutazione v = {
+    //     8.0,
+    //     "Italiano",
+    //     {
+    //         27,
+    //         4,
+    //         2024
+    //     }
+    // };
+    // studenti.at(0).valutazioni.push_back(v);
+    salva("dati.txt", studenti);
     return 0;
 }
