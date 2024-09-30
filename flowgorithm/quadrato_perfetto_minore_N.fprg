@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-30 08:20:37 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0wOS0zMDsiMDc6NTQ6MDcgIjsyMDY5"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0wOS0zMDsiMDg6MjA6MzcgIjszOzIxNzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, soluzione" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="soluzione" expression="1"/>
+            <while expression="soluzione*soluzione&lt;N">
+                <assign variable="soluzione" expression="soluzione+1"/>
+            </while>
+            <output expression="(soluzione-1)*(soluzione-1)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
