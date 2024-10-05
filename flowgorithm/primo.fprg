@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-05 04:05:08 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0wNTsiMTE6MTc6MzIgIjsyMDU1"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0wNTsiMDQ6MDU6MDggIjsxOzIxNjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, cont, resto" type="Integer" array="False" size=""/>
+            <declare name="primo" type="Boolean" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="cont" expression="2"/>
+            <assign variable="primo" expression="true"/>
+            <while expression="cont&lt;N/2 and primo==true">
+                <assign variable="resto" expression="N%cont"/>
+                <if expression="resto==0">
+                    <then>
+                        <assign variable="primo" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="cont" expression="cont+1"/>
+            </while>
+            <if expression="primo==true">
+                <then>
+                    <output expression="&quot;il numero e' primo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;il numero non e' primo&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
