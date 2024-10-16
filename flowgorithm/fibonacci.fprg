@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-11 12:30:33 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0xMTsiMTE6NTg6MTMgIjsyMDU2"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0xMTsiMTI6MzA6MzMgIjsxOzIxNTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, temp, num, i" type="Integer" array="False" size=""/>
+            <input variable="num"/>
+            <if expression="num==0">
+                <then>
+                    <output expression="0" newline="True"/>
+                </then>
+                <else>
+                    <if expression="num==1">
+                        <then>
+                            <output expression="1" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="a" expression="0"/>
+                            <assign variable="b" expression="1"/>
+                            <for variable="i" start="2" end="num" direction="inc" step="1">
+                                <assign variable="temp" expression="a+b"/>
+                                <assign variable="a" expression="b"/>
+                                <assign variable="b" expression="temp"/>
+                            </for>
+                            <output expression="temp" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

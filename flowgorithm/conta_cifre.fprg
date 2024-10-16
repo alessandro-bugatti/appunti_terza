@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-11 12:51:45 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0xMTsiMTI6MzA6MzUgIjsyMDUx"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0xMTsiMTI6NTE6NDUgIjsxOzIxNjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, cifre, temp" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="temp" expression="n"/>
+            <assign variable="cifre" expression="0"/>
+            <comment text="prima soluzione"/>
+            <while expression="n&gt;0">
+                <assign variable="n" expression="n/10"/>
+                <assign variable="cifre" expression="cifre+1"/>
+            </while>
+            <output expression="cifre" newline="True"/>
+            <comment text="seconda soluzione"/>
+            <declare name="limite" type="Integer" array="False" size=""/>
+            <assign variable="limite" expression="10"/>
+            <assign variable="cifre" expression="1"/>
+            <assign variable="n" expression="temp"/>
+            <if expression="n&lt;10">
+                <then>
+                    <output expression="cifre" newline="True"/>
+                </then>
+                <else>
+                    <while expression="n&gt;=limite">
+                        <assign variable="cifre" expression="cifre+1"/>
+                        <assign variable="limite" expression="limite*10"/>
+                    </while>
+                    <output expression="cifre" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

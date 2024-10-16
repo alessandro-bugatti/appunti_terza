@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-09 08:39:15 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0wOTsiMDg6MDc6MzkgIjsyMDcx"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0wOTsiMDg6Mzk6MTUgIjsxOzIxNzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, fattoriale, i, conta" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="fattoriale" expression="1"/>
+            <assign variable="conta" expression="1"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <assign variable="fattoriale" expression="fattoriale*conta"/>
+                <assign variable="conta" expression="conta+1"/>
+            </for>
+            <output expression="&quot;fattoriale N &quot; &amp; fattoriale" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
