@@ -1,5 +1,7 @@
 #include <iostream>
 
+#define PAUSE system("pause>nul|set/p = Premere INVIO per lanciare il dado...");
+
 int main() {
     int target, lancio;
     srand(time(NULL));
@@ -10,6 +12,7 @@ int main() {
     * se al primo tiro il giocatore fa 7 o 11 ha vinto
     * se al primo tiro il giocatore fa 2, 3 o 12 ha perso
     */
+    PAUSE
     lancio = rand()%6 + 1 + rand()%6 + 1;
     std::cout << "Il tuo lancio ha prodotto " << lancio << std::endl;
     if (lancio == 7 || lancio == 11) {
@@ -25,9 +28,11 @@ int main() {
             - il giocatore realizza un 7, in quel caso perde
         */
         target = lancio;
+        PAUSE
         lancio = rand()%6 + 1 + rand()%6 + 1;
         std::cout << "Il tuo lancio ha prodotto " << lancio << std::endl;
         while(lancio != target && lancio != 7) {
+            PAUSE
             lancio = rand()%6 + 1 + rand()%6 + 1;
             std::cout << "Il tuo lancio ha prodotto " << lancio << std::endl;
         }
