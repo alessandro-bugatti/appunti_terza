@@ -38,6 +38,16 @@ void unisci(int src[], int n, std::vector<int> &dst) {
     }
 }
 
+void interseca(int src1[], int src2[], int n, std::vector<int> &dst) {
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if (src1[i] == src2[j] && !presente(dst, src1[i])) {
+                dst.push_back(src1[i]);
+            }
+        }
+    }
+}
+
 int main() {
     const int DIM = 10;
     int v1[DIM], v2[DIM];
@@ -49,5 +59,7 @@ int main() {
     unisci(v1, DIM, unione);
     unisci(v2, DIM, unione);
     stampa(unione);
+    interseca(v1, v2, DIM, intersezione);
+    stampa(intersezione);
     return 0;
 }
