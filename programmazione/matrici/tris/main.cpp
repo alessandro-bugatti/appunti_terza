@@ -109,8 +109,7 @@ int main() {
     while (stato == 0) {
         int r, c;
         stampa(tris);
-        std::cout << "Turno del giocatore " << giocatore << std::en3
-        dl;
+        std::cout << "Turno del giocatore " << giocatore << std::endl;
         std::cout << "Inserisci la riga (1-3): ";
         std::cin >> r;
         std::cout << "Inserisci la colonna (1-3): ";
