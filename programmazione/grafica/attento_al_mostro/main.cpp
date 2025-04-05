@@ -1,6 +1,8 @@
+#include <fstream>
 #include <iostream>
 #include <ostream>
 #include <string>
+#include <vector>
 
 #include "include/raylib.h"
 
@@ -32,8 +34,21 @@ void disegna(const Texture &immagine, int errori) {
     }
 }
 
+std::vector<std::string> carica(std::string nomefile) {
+    std::vector<std::string> v;
+    std::string s;
+    std::ifstream in(nomefile);
+    if (in) {
+        while (in >> s) {
+            v.push_back(s);
+        }
+    }
+    return v;
+}
+
 int main(void)
 {
+    srand(time(NULL));
     // Initialization
     //--------------------------------------------------------------------------------------
     const int screenWidth = 800;
@@ -43,7 +58,20 @@ int main(void)
     int conta_errori = 0;
     std::string segreta, provate, attuale;
 
-    segreta = "armadillo";
+    std::vector<std::string> parole;
+
+    /*
+    parole.push_back("assegni");
+    parole.push_back("coccodrillo");
+    parole.push_back("automobile");
+    parole.push_back("finestra");
+    */
+    parole = carica("../assets/parole.txt");
+    if (parole.size() == 0) {
+        std::cout << "Errore nell'apertura file.";
+        return 1;
+    }
+    segreta = parole.at(rand()%parole.size());
     inizializza(segreta, attuale);
 
 
@@ -53,37 +81,61 @@ int main(void)
 
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
-
+    int stato;
+    const int GIOCO = 1;
+    const int FINALE = 2;
+    const int CHIUDI_PROGRAMMA = 3;
+    stato = GIOCO;
     // Main game loop
-    while (!WindowShouldClose() && conta_errori < MAX_ERRORI && segreta != attuale)    // Detect window close button or ESC key
+    while (!WindowShouldClose() && stato != CHIUDI_PROGRAMMA)    // Detect window close button or ESC key
     {
-        // Update
-        //----------------------------------------------------------------------------------
-        // TODO: Update your variables here
-        //----------------------------------------------------------------------------------
         char lettera = GetCharPressed();
-        if (lettera > 0) {
-            std::cout << lettera << std::endl;
-            if (controlla(segreta, lettera, attuale) == false)
-                conta_errori++;
-        }
-        // Draw
-        //----------------------------------------------------------------------------------
         BeginDrawing();
 
         ClearBackground(RAYWHITE);
+        if (stato == GIOCO) {
+            if (lettera > 0) {
+                std::cout << lettera << std::endl;
+                if (controlla(segreta, lettera, attuale) == false)
+                    conta_errori++;
+            }
+            if (conta_errori == MAX_ERRORI || segreta == attuale)
+                stato = FINALE;
 
-        disegna(immagine, conta_errori);
-        DrawText(attuale.c_str(), 20, screenHeight - 60, 60, BLACK);
+            disegna(immagine, conta_errori);
+            DrawText(attuale.c_str(), 20, screenHeight - 60, 60, BLACK);
 
+        }else if (stato == FINALE) {
+            if (lettera > 0) {
+                if (lettera == 'y') {
+                    stato = GIOCO;
+                    segreta = parole.at(rand() % parole.size());
+                    inizializza(segreta, attuale);
+                    conta_errori = 0;
+                }
+                else {
+                    stato = CHIUDI_PROGRAMMA;
+                }
+            }
+            if (conta_errori == MAX_ERRORI) {
+                std::string s = "Hai perso, la parola era " + segreta;
+                DrawText(s.c_str(), 100, 200, 36, BLACK);
+            }
+            else {
+                std::string s = "Hai vinto, la parola era " + segreta;
+                DrawText(s.c_str(), 100, 200, 36, BLACK);
+            }
+            DrawText("y per continuare, n per uscire",100, 300,36,BLACK);
+        }
         EndDrawing();
-        //----------------------------------------------------------------------------------
+
     }
 
     // De-Initialization
     //--------------------------------------------------------------------------------------
     CloseWindow();        // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
+    //Questa parte può essere rimossa se viene gestita nella parte grafica
     if (segreta == attuale) {
         std::cout << "Hai indovinato la parola " << segreta << std::endl;
     }
