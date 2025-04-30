@@ -31,7 +31,7 @@ int main(void)
     const int screenWidth = 1200;
     const int screenHeight = 800;
 
-    InitWindow(screenWidth, screenHeight, "Attento al mostro");
+    InitWindow(screenWidth, screenHeight, "Gioco di carte");
 
     Texture2D immagine = LoadTexture("../assets/deck.png");
 
