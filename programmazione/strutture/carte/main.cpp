@@ -68,40 +68,53 @@ Carta pesca_carta(std::vector<Carta>& m) {
 }
 
 int conta_punti(const std::vector<Carta>& mano) {
-
+    int somma = 0;
+    for (int i = 0; i < mano.size(); ++i) {
+        int valore = mano.at(i).valore;
+        if (valore <= 10) {
+            somma += valore;
+        }
+        else {
+            somma += 10;
+        }
+    }
+    return somma;
 }
 
 int main() {
-    Carta c, d;
-    //Assegnamento
-    c.seme = 1;
-    c.valore = 7;
-    //Input
-    /*std::cout << "Inserisci il seme (1 - cuori, 2 - quadri, 3- fiori, 4 - picche): ";
-    std::cin >> d.seme;
-    std::cout << "Inserisci il valore: ";
-    std::cin >> d.valore;*/
-    //Output
-    std::cout << nome_carta(c) << std::endl;
-    std::cout << nome_carta(d) << std::endl;
-    //creazione del mazzo di carte
-    std::vector<Carta> mazzo;
-    mazzo = crea_mazzo();
-    for (int i = 0; i < mazzo.size(); ++i) {
-        std::cout << nome_carta(mazzo.at(i)) << std::endl;
-    }
-    mescola_mazzo(mazzo);
-    for (int i = 0; i < mazzo.size(); ++i) {
-        std::cout << nome_carta(mazzo.at(i)) << std::endl;
-    }
-    std::vector<Carta> mano;
-    for (int i = 0; i < 5; ++i) {
-        Carta c = pesca_carta(mazzo);
-        mano.push_back(c);
-    }
-    std::cout << "Mano del giocatore" << std::endl;
-    for (int i = 0; i < mano.size(); ++i) {
-        std::cout << nome_carta(mano.at(i)) << std::endl;
-    }
+    srand(time(NULL));
+    // Carta c, d;
+    // //Assegnamento
+    // c.seme = 1;
+    // c.valore = 7;
+    // //Input
+    // /*std::cout << "Inserisci il seme (1 - cuori, 2 - quadri, 3- fiori, 4 - picche): ";
+    // std::cin >> d.seme;
+    // std::cout << "Inserisci il valore: ";
+    // std::cin >> d.valore;*/
+    // //Output
+    // std::cout << nome_carta(c) << std::endl;
+    // std::cout << nome_carta(d) << std::endl;
+    // //creazione del mazzo di carte
+    // std::vector<Carta> mazzo;
+    // mazzo = crea_mazzo();
+    // for (int i = 0; i < mazzo.size(); ++i) {
+    //     std::cout << nome_carta(mazzo.at(i)) << std::endl;
+    // }
+    // mescola_mazzo(mazzo);
+    // for (int i = 0; i < mazzo.size(); ++i) {
+    //     std::cout << nome_carta(mazzo.at(i)) << std::endl;
+    // }
+    // std::vector<Carta> mano;
+    // for (int i = 0; i < 5; ++i) {
+    //     Carta c = pesca_carta(mazzo);
+    //     mano.push_back(c);
+    // }
+    // std::cout << "Mano del giocatore" << std::endl;
+    // for (int i = 0; i < mano.size(); ++i) {
+    //     std::cout << nome_carta(mano.at(i)) << std::endl;
+    // }
+    // std::cout << "Valore della mano attuale: " << conta_punti(mano) << std::endl;
+
     return 0;
 }
