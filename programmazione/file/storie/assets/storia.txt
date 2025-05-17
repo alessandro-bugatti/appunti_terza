@@ -1,7 +1,42 @@
 Sei di fronte a un castello tenebroso. I lupi ululano in lontananza e una brezza gelida ti soffia sul collo.
 Scappo via veloce
-3
+2
 Mi mangio un panino che ho sempre con me per le situazioni più spinose
 1
 Mi dirigo verso il castello, preparandomi al peggio.
-2
+3
+Il tuo panino si rivela essere avvelenato, che sfortuna, la tua storia finisce qua.
+Fine
+-1
+Fine
+-1
+Fine
+-1
+La tua è stata una buona idea, solo che la storia finisce qua, buona giornata.
+Fine
+-1
+Fine
+-1
+Fine
+-1
+Il castello è chiuso da una pesante porta, sigillata con un lucchetto.
+Mi mangio un panino che ho sempre con me per le situazioni più spinose
+1
+Mi nascondo dietro una roccia e schiaccio un bel sonnellino.
+4
+Busso al portone e preparo lo spadone che porto sempre con me insieme al panino.
+5
+Mentre stai dormendo, un orco ti trova, ti da una mazzata in testa, molto forte, e tanti saluti. I tuoi miseri resti diventeranno cibo per avvoltoi.
+Fine
+-1
+Fine
+-1
+Fine
+-1
+Ti apre la porta un bieco figuro, che tenta di colpirti con il suo coltellino tascabile, ma il tuo spadone è decisamente più efficiente. Dopo esserti liberato di lui, vai nella stanza del tesoro, ti riempi le tasche di cioccolata e riparti per una nuova avventura, buona giornata.
+Fine
+-1
+Fine
+-1
+Fine
+-1
