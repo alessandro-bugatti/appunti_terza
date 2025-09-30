@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-27 08:25:38 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0wOS0yNjsiMTA6NDE6NDcgIjsyMDY5"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0wOS0yNzsiMDg6MjU6MzggIjsyOzIxODg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="h, t, s" type="Real" array="False" size=""/>
+            <output expression="&quot;scrivi l'altezza&quot;" newline="True"/>
+            <input variable="h"/>
+            <assign variable="t" expression="0"/>
+            <assign variable="s" expression="0"/>
+            <while expression="h - s &gt; 0">
+                <output expression="h - s" newline="True"/>
+                <assign variable="s" expression="0.5*9.8*t*t"/>
+                <assign variable="t" expression="t + 0.1"/>
+            </while>
+            <output expression="t" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

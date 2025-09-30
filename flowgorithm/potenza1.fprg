@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-29 12:33:39 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0wOS0yOTsiMTE6NTk6NDggIjsyMDgz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0wOS0yOTsiMTI6MzM6MzkgIjsxOzIxODQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="b, potenza" type="Real" array="False" size=""/>
+            <declare name="esponente" type="Integer" array="False" size=""/>
+            <input variable="b"/>
+            <input variable="esponente"/>
+            <assign variable="potenza" expression="1"/>
+            <if expression="esponente &gt; 0">
+                <then>
+                    <while expression="esponente &gt; 0">
+                        <assign variable="potenza" expression="potenza * b"/>
+                        <assign variable="esponente" expression="esponente - 1"/>
+                    </while>
+                    <output expression="potenza" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="esponente" expression="-esponente"/>
+                    <while expression="esponente &gt; 0">
+                        <assign variable="potenza" expression="potenza * b"/>
+                        <assign variable="esponente" expression="esponente - 1"/>
+                    </while>
+                    <output expression="1 / potenza" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

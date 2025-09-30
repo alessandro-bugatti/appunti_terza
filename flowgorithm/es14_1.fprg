@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-26 10:32:33 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0wOS0yNjsiMTA6MTY6MjUgIjsyMDY3"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0wOS0yNjsiMTA6MzI6MzMgIjsxOzIxNzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="grammi" type="Real" array="False" size=""/>
+            <declare name="contatore" type="Integer" array="False" size=""/>
+            <output expression="&quot;Quanti grammi di Cesio ci sono&quot;" newline="True"/>
+            <input variable="grammi"/>
+            <assign variable="contatore" expression="0"/>
+            <while expression="grammi&gt; 0.001">
+                <assign variable="grammi" expression="grammi / 2"/>
+                <assign variable="contatore" expression="contatore + 1"/>
+            </while>
+            <assign variable="contatore" expression="contatore * 30"/>
+            <output expression="contatore" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

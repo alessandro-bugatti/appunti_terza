@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-29 03:16:48 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0wOS0yOTsiMTE6NTk6NDggIjsyMDgz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0wOS0yOTsiMDM6MTY6NDggIjs0OzIxODg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="b, potenza" type="Real" array="False" size=""/>
+            <declare name="esponente, iniziale, i" type="Integer" array="False" size=""/>
+            <input variable="b"/>
+            <input variable="esponente"/>
+            <assign variable="potenza" expression="1"/>
+            <assign variable="iniziale" expression="esponente"/>
+            <if expression="esponente &lt; 0">
+                <then>
+                    <assign variable="esponente" expression="-esponente"/>
+                </then>
+                <else/>
+            </if>
+            <for variable="i" start="1" end="esponente" direction="inc" step="1">
+                <assign variable="potenza" expression="potenza * b"/>
+            </for>
+            <if expression="iniziale &gt; 0">
+                <then>
+                    <output expression="potenza" newline="True"/>
+                </then>
+                <else>
+                    <output expression="1 / potenza" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
