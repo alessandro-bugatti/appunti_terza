@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="es23_da_completare"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-03 10:54:49 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0xMC0wMzsiMTA6NDE6NTAgIjsyMDUw"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0xMC0wMzsiMTA6NTQ6NDkgIjsxOzIxNzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, numero, i, massimo" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <input variable="massimo"/>
+            <for variable="i" start="2" end="N" direction="inc" step="1">
+                <input variable="numero"/>
+                <if expression="numero&gt;massimo">
+                    <then>
+                        <assign variable="massimo" expression="numero"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="massimo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
