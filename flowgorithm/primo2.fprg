@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="primo"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-08 09:00:36 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0xMC0wODsiMDg6MzU6NDkgIjsyMDcz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0xMC0wODsiMDk6MDA6MzYgIjs0OzIxNzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, contaDiv" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="contaDiv" expression="0"/>
+            <assign variable="i" expression="2"/>
+            <while expression="i &lt;= sqrt(n) &amp;&amp; contaDiv == 0">
+                <if expression="n%i==0">
+                    <then>
+                        <assign variable="contaDiv" expression="contaDiv + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <if expression="contaDiv &gt; 0">
+                <then>
+                    <output expression="&quot;il numero non &#232; primo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;il numero &#232; primo&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
