@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="frazioni_semplificazione"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-10 10:52:59 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0xMC0xMDsiMTA6MzU6MzUgIjsyMDU0"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0xMC0xMDsiMTA6NTI6NTkgIjsxOzIxNjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, den, min, div, mcd" type="Integer" array="False" size=""/>
+            <declare name="trovato" type="Boolean" array="False" size=""/>
+            <assign variable="trovato" expression="false"/>
+            <input variable="num"/>
+            <input variable="den"/>
+            <if expression="num &lt; den">
+                <then>
+                    <assign variable="min" expression="num"/>
+                </then>
+                <else>
+                    <assign variable="min" expression="den"/>
+                </else>
+            </if>
+            <assign variable="div" expression="min"/>
+            <while expression="!trovato">
+                <if expression="num % div == 0 &amp;&amp; den % div == 0">
+                    <then>
+                        <assign variable="trovato" expression="true"/>
+                        <assign variable="mcd" expression="div"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="div" expression="div - 1"/>
+            </while>
+            <output expression="num / mcd" newline="True"/>
+            <output expression="den / mcd" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
