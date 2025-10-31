@@ -16,7 +16,6 @@ int main()
             std::cout << " ";
 
         }
-        //singola riga di lunghezza N
         for (int j = 0; j < n_asterischi; ++j) {
             std::cout << "*";
         }
@@ -31,7 +30,6 @@ int main()
             std::cout << " ";
 
         }
-        //singola riga di lunghezza N
         for (int j = 0; j < n_asterischi; ++j) {
             std::cout << "*";
         }
