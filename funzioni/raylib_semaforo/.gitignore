@@ -1,0 +1,15 @@
+# Ignora tutto
+*
+
+# Non ignorare le directory (necessario per poter trovare i .cpp dentro di esse)
+!*/
+
+# Tieni solo i file .cpp
+!*.cpp
+
+# Tieni anche .gitignore
+!.gitignore
+
+.idea
+libs
+/cmake-build-debug/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
