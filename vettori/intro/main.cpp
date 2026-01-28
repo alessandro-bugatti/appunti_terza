@@ -29,6 +29,7 @@ int main() {
     media /= n_voti;
     //Questo non poteva essere fatto nei for precedenti
     for (int i = 0; i < n_voti; ++i) {
+        printf("%p\n", &voti[i]);
         if (voti[i] < media) {
             sotto_media++;
         }
