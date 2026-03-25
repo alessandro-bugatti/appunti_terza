@@ -3,6 +3,12 @@
 const int R = 100;
 const int C = 80;
 
+/**
+ * Inizilizza la matrice m con il 50%
+ * di celle vive e il 50% di celle morte
+ * distribuite in maniera casuale
+ * @param m la matrice da inizializzare
+ */
 void inizializza(bool m[R][C]) {
     for (int i = 0; i < R; ++i) {
         for (int j = 0; j < C; ++j) {
@@ -15,7 +21,14 @@ void inizializza(bool m[R][C]) {
         }
     }
 }
-
+/**
+ * Controlla il numero di celle vive
+ * intorno alla cella in posizione r, c
+ * @param m la matrice da controllare
+ * @param r la riga della casella centrale
+ * @param c la colonna della casella centrale
+ * @return il numero di celle vive
+ */
 int quante_vive(bool m[R][C], int r, int c) {
     int conta = 0;
     for (int i = -1; i <= 1; ++i) {
@@ -27,6 +40,11 @@ int quante_vive(bool m[R][C], int r, int c) {
     }
 }
 
+/**
+ * Fa evolvere la matrice m secondo
+ * le regole del gioco Life di Conway
+ * @param m La matrice di stato del gioco
+ */
 void evolvi(bool m[R][C]) {
     bool temp[R][C];
     for (int i = 1; i < R - 1; ++i) {
@@ -35,15 +53,18 @@ void evolvi(bool m[R][C]) {
             if (m[i][j] == true && (vive == 2 || vive == 3)) {
                 temp[i][j] = true;
             }
-
+            //Qui vanno le altre regole
         }
     }
+    //Qui va la copia dei valori di temp in m
 
 }
 
 int main() {
     bool mappa[R][C];
     inizializza(mappa);
+    //La chiamata a questa funzione sarà
+    //all'interno di un ciclo
     evolvi(mappa);
     return 0;
 }
