@@ -1,7 +1,7 @@
 #include <iostream>
 
-const int R = 100;
-const int C = 80;
+const int R = 10;
+const int C = 8;
 
 /**
  * Inizilizza la matrice m con il 50%
@@ -38,6 +38,17 @@ int quante_vive(bool m[R][C], int r, int c) {
             }
         }
     }
+    return conta;
+}
+
+void stampa(bool m[R][C]) {
+    std::cout << "Tabella" << std::endl;
+    for (int i = 0; i < R; ++i) {
+        for (int j = 0; j < C; ++j) {
+            std::cout << m[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
 }
 
 /**
@@ -53,11 +64,26 @@ void evolvi(bool m[R][C]) {
             if (m[i][j] == true && (vive == 2 || vive == 3)) {
                 temp[i][j] = true;
             }
-            //Qui vanno le altre regole
+            else if (m[i][j] == true && vive < 2) {
+                temp[i][j] = false;
+            }
+            else if (m[i][j] == true && vive > 3) {
+                temp[i][j] = false;
+            }
+            else if (m[i][j] == false && vive == 3) {
+                temp[i][j] = true;
+            }
+            else {
+                temp[i][j] = false;
+            }
         }
     }
     //Qui va la copia dei valori di temp in m
-
+    for (int i = 1; i < R - 1; ++i) {
+        for (int j = 1; j < C - 1; ++j) {
+            m[i][j] = temp[i][j];
+        }
+    }
 }
 
 int main() {
@@ -65,6 +91,11 @@ int main() {
     inizializza(mappa);
     //La chiamata a questa funzione sarà
     //all'interno di un ciclo
-    evolvi(mappa);
+    stampa(mappa);
+    for (int i = 0; i < 5; ++i) {
+
+        evolvi(mappa);
+        stampa(mappa);
+    }
     return 0;
 }
