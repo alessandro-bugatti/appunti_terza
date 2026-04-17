@@ -23,6 +23,13 @@ int main() {
     std::cout << s.substr(11) << std::endl;
     std::cout << s.substr(11, 13) << std::endl;
 
-
+    s = "oggi ho fatto la verifica";
+    std::string nuova = "alla prima ora ";
+    s.insert(5, nuova);
+    std::cout << s << std::endl;
+    s.erase(0, 5);
+    std::cout << s << std::endl;
+    s.replace(5, 5, "seconda");
+    std::cout << s << std::endl;
     return 0;
 }
