@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="potenze-del-due"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-23 12:50:20 PM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0wOS0yMzsxMTo1MjoyMyBBTTsyMTM4"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0wOS0yMzsxMjo1MDoyMCBQTTsxOzIyNTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, pot, esp" type="Integer" array="False" size=""/>
+            <output expression="&quot;Numero: &quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="pot" expression="1"/>
+            <assign variable="esp" expression="0"/>
+            <while expression="pot &lt;= n">
+                <assign variable="pot" expression="pot * 2"/>
+                <assign variable="esp" expression="esp + 1"/>
+            </while>
+            <output expression="&quot;Numero di potenza: &quot; &amp; esp" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
