@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="pigreco"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-03 10:57:41 AM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0xMC0wMzsxMDoyNjowMCBBTTsyMTIz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0xMC0wMzsxMDo1Nzo0MSBBTTsxOzIyNDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="piGreco, addendo, denominatore" type="Real" array="False" size=""/>
+            <declare name="N, i, numeratore" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="numeratore" expression="1"/>
+            <assign variable="denominatore" expression="1"/>
+            <assign variable="piGreco" expression="0"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <assign variable="addendo" expression="numeratore / denominatore"/>
+                <assign variable="piGreco" expression="piGreco + addendo"/>
+                <assign variable="numeratore" expression="-numeratore"/>
+                <assign variable="denominatore" expression="denominatore + 2"/>
+            </for>
+            <output expression="piGreco * 4" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
