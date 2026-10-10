@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="semplifica-frazione"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-10 11:17:48 PM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0xMC0xMDsxMDoyMToyNSBBTTsyMTIz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0xMC0xMDsxMToxNzo0OCBQTTsxOzIyNTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numeratore, denominatore, divisore, minimo" type="Integer" array="False" size=""/>
+            <input variable="numeratore"/>
+            <input variable="denominatore"/>
+            <if expression="numeratore&gt;denominatore">
+                <then>
+                    <assign variable="minimo" expression="denominatore"/>
+                </then>
+                <else>
+                    <assign variable="minimo" expression="numeratore"/>
+                </else>
+            </if>
+            <for variable="divisore" start="minimo" end="2" direction="dec" step="1">
+                <if expression="numeratore%divisore==0 &amp;&amp; denominatore%divisore==0">
+                    <then>
+                        <assign variable="numeratore" expression="numeratore/divisore"/>
+                        <assign variable="denominatore" expression="denominatore/divisore"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="numeratore" newline="True"/>
+            <output expression="denominatore" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
